@@ -1,0 +1,251 @@
+*,*::before,*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+:root {
+    --colorDark1: #112D4E;
+    --colorDark2: #3F72AF;
+    --colorLight1: #DBE2EF;
+    --colorLight2: #F9F7F7;
+}
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    color: var(--colorLight2);
+    background: linear-gradient(-45deg, #112d4e ,#18406d , #4378ba );
+    animation: gradient 15s ease infinite;
+    background-size: 400% 400%;
+}
+@keyframes gradient{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+h1 {
+    text-align: center;
+    text-transform:uppercase;
+    padding-top: 20px;
+}
+.tabContainer{
+    width:90%;
+    max-width: 550px;
+    margin: 0 auto;
+    margin-top: 4rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tab{
+    cursor: pointer;
+    font-size: 0.875rem;
+    letter-spacing: 1.75px;
+    padding: 5px 8px;
+}
+.mainContainer{
+    margin-block:4rem;
+}
+.subgroup{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+.grantLocationContainer img{
+    margin-bottom: 2rem;
+}
+
+.grantLocationContainer p:first-of-type{
+    font-size: 1.75rem;
+    font-weight: 600; 
+}
+
+.grantLocationContainer p:last-of-type{
+    font-size:0.85rem;
+    font-weight: 500;
+    margin-top: 0.75rem;
+    margin-bottom: 1.75rem;
+    letter-spacing: 0.75px;
+}
+.grantAccess{
+    all: unset;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    border-radius: 5px;
+    background-color: var(--colorDark2);
+    cursor: pointer;
+    padding: 10px 30px;
+    margin-bottom: 10px;
+}
+.grantAccess:hover{
+    background-color: #254c7c;
+    text-shadow: 0 0 2px white;
+    transition: all 150ms ease-in;
+}
+
+.grantLocationContainer{
+    display: none;
+}
+.grantLocationContainer.active{
+    display: flex;
+}
+
+
+
+
+
+
+
+.loadingContainer{
+    display: none;
+}
+.loadingContainer.active{
+    display: flex;
+}
+.loadingContainer p{
+    text-transform: uppercase;
+}
+
+
+
+
+
+
+
+
+.weatherinformation{
+    display: none;
+}
+.weatherinformation.active{
+    display: flex;
+}
+.nameOfCity{
+    display: flex;
+    align-items: center;
+    gap: 0 1rem;
+    margin-bottom: 1rem;
+}
+.cityWeatherDiscription{
+    font-size:1.5rem;
+    font-weight:200;
+}
+.weatherinformation img{
+    width:90px;
+    height:90px;
+}
+.nameOfCity p{
+    font-size: 2rem;
+}
+.nameOfCity img{
+    width: 30px;
+    height:30px;
+    object-fit: contain;
+}
+.cityTemp{
+    font-size:2.75rem;
+    font-weight:700;
+}
+.parameterContainer{
+    width:90%;
+    display: flex;
+    gap: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+.parameter{
+    width:30%;
+    max-width:200px;
+    background-color: rgba(219, 226, 239, 0.5);;
+    border-radius: 5px;
+    padding:1rem;
+    display: flex;
+    flex-direction: column;
+    gap:5px 0;
+    align-items: center; 
+}
+.parameter img{
+    width:50px;
+    height:50px;
+}
+.parameter p:first-of-type{
+    font-size: 1.15rem;
+    font-weight:600;
+    text-transform: uppercase;
+}
+.parameter p:last-of-type{
+    font-size: 1rem;
+    font-weight: 200;
+}
+
+
+
+
+
+.formContainer{
+    display: none;
+    width:90%;
+    max-width:550px;
+    margin:0 auto;
+    justify-content: center;
+    align-items: center;
+    gap: 0 10px; 
+    margin-bottom: 3rem;
+}
+.formContainer.active{
+    display: flex;
+}
+.formContainer input{
+    all:unset;
+    width: calc(100% - 80px);
+    height:40px;
+    padding: 0 20px;
+    background-color:rgba(219, 226, 239, 0.5);
+    border-radius: 10px;
+}
+.formContainer input::placeholder{
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.formContainer input:focus{
+    outline: 3px solid rgba(255, 255, 255, 0.7);
+}
+
+.formContainer button{
+    padding:unset;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    margin-bottom:1px;
+}
+
+
+
+
+
+.tab.current-tab{
+    background-color:rgba(219, 226, 239, 0.5);
+    border-radius: 4px;
+}
+.formContainer.active {
+    scale:1;
+    opacity: 1;
+    display:flex;
+}
